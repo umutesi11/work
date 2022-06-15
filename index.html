@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is my homework</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+<style>
+    [
+        class*="col"]{
+            border: 2px solid black;
+            padding: 1rem;
+            color: black;
+
+
+        }
+        .content{
+           
+            padding: 1rem;
+            border: 2px solid black;
+        }
+    
+</style>
+    </head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">header</div>
+
+        </div>
+        
+            <div class="content">
+                {% for page in act %}
+                <div class="card border-dark mb-3" style="max-width: 40rem;">
+                    <div class="card-header">{{page.title}}</div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">{{page.desc}}</h5>
+                      <p class="card-text">{{page.technology}}</p>
+                          <h6 class="card-title">{{page.pub_date}}</h6>
+                          <h6 class="card-title">{{page.author}}</h6>
+                     <a href="details.html"> <button type="button" class="btn btn-outline-dark btn-lg">Next..</button></a>
+                    </div>
+                  </div>
+                 {% endfor %}
+            </div>
+        </div>
+
+
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+</body>
+</html>
